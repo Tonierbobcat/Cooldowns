@@ -1,6 +1,11 @@
 # Cooldowns
 
 ```java
+/**
+ * @Author Logan
+ * @Github https://github.com/Tonierbobcat
+ */
+
 public interface Cooldown {
 
     /**
@@ -14,6 +19,11 @@ public interface Cooldown {
 ```
 
 ```java
+/**
+ * @Author Logan
+ * @Github https://github.com/Tonierbobcat
+ */
+
 public class ComplexCooldown implements Cooldown {
     private final ConcurrentHashMap<UUID, Long> cooldowns = new ConcurrentHashMap<>();
     private final long interval;
@@ -43,6 +53,11 @@ public class ComplexCooldown implements Cooldown {
 ```
 
 ```java
+/**
+ * @Author Logan
+ * @Github https://github.com/Tonierbobcat
+ */
+
 public class SimpleCooldown extends ComplexCooldown {
     public SimpleCooldown(long intervalMillis) {
         super(intervalMillis);
